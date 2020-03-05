@@ -16,7 +16,9 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         let ud = UserDefaults.standard
         let name = ud.string(forKey: "name")
-        if let nm = name{
+        let password = ud.string(forKey: "password")
+        if let nm = name, let pwd = password
+        {
             lblWelcome.text = "Welcome, \(nm)"
         }
 
@@ -26,6 +28,7 @@ class WelcomeViewController: UIViewController {
     @IBAction func btnRemove(_ sender: UIButton) {
         
         UserDefaults.standard.removeObject(forKey: "name")
+        UserDefaults.standard.removeObject(forKey: "password")
     }
     
     /*
