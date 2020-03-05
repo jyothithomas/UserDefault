@@ -18,9 +18,9 @@ class UserDefaultViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         txtFromUser.text = ""
-        lblfromUser.text = ""
+        txtPassword.text = ""
     }
 
     @IBAction func btnSave(_ sender: UIButton) {

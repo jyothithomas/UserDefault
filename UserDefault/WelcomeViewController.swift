@@ -19,7 +19,7 @@ class WelcomeViewController: UIViewController {
         let password = ud.string(forKey: "password")
         if let nm = name, let pwd = password
         {
-            lblWelcome.text = "Welcome, \(nm)"
+            lblWelcome.text = "Welcome, \(nm) \(pwd)"
         }
 
         // Do any additional setup after loading the view.
